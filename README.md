@@ -5,6 +5,9 @@
   <img src="https://img.shields.io/npm/v/@chainplatform/sdk.svg"></img>
   <img src="https://img.shields.io/npm/dt/@chainplatform/sdk.svg"></img>
 </a>
+
+[![@chainplatform/sdk install size](https://packagephobia.com/badge?p=@chainplatform/sdk)](https://packagephobia.com/result?p=@chainplatform/sdk)
+
 <a href="https://twitter.com/intent/follow?screen_name=doansan"><img src="https://img.shields.io/twitter/follow/doansan.svg?label=Follow%20@doansan" alt="Follow @doansan"></img></a>
 
 ### Install
