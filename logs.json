@@ -1,0 +1,42 @@
+[
+    {
+        "label": "Aug 10, 2024",
+        "content": "Upgrade core platform to React Native 0.74.5, create @chainplatform/sdk package for platform."
+    },
+    {
+        "label": "Aug 01, 2024",
+        "content": "Upgrade core platform to React Native 0.74.4, create react-native-webview-video package to play video on youtube and vimeo."
+    },
+    {
+        "label": "Jul 01, 2024",
+        "content": "Upgrade core platform to React Native 0.74.3, add React Native Web with idea build multiplatfrom (iOS, Android, Mini App, Mobile Website, Desktop Website) with one time development. create @chainplatform/pull-to-refresh package support pull to refresh, react-native-stripe-payment-webview package support stripe payment in react native and react native web."
+    },
+    {
+        "label": "Jun 04, 2024",
+        "content": "Upgrade core to React Native 0.74.2. Change platform name to CHAIN PLATFORM."
+    },
+    {
+        "label": "Early 2024",
+        "content": "Upgrade core to React Native 0.73.0"
+    },
+    {
+        "label": "From Mar 25, 2022 to Jul 15, 2023",
+        "content": "Upgrade core platform to React Native 0.72.3 and make some small app (fisherman, camera interval [marketplace], lockscreen [published], financial [published], salehunting [published], pixelfish, booky [published])"
+    },
+    {
+        "label": "Feb 27, 2022",
+        "content": "Upgrade core platform MAM"
+    },
+    {
+        "label": "Dec 27, 2021",
+        "content": "Biggest upgrade to React Native 0.6x.x with 3000+ changed files"
+    },
+    {
+        "label": "Early 2021",
+        "content": "Upgrade core React Native version to 0.63.x and create the first version of core platform named Make App Mobile (MAM) but never public."
+    },
+    {
+        "label": "Early 2019",
+        "content": "Init project by small idea cashback mobile (BackPay) app using React Native 0.59.x"
+    }
+]
