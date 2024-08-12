@@ -5,9 +5,6 @@
   <a href="https://github.com/ChainPlatform/ChainSDK/blob/HEAD/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
   </a>
-  <a href="https://circleci.com/gh/ChainPlatform/ChainSDK">
-    <img src="https://circleci.com/gh/ChainPlatform/ChainSDK.svg?style=shield" alt="Current CircleCI build status." />
-  </a>
   <a href="https://www.npmjs.com/package/@chainplatform/sdk">
     <img src="https://img.shields.io/npm/v/@chainplatform/sdk?color=brightgreen&label=npm%20package" alt="Current npm package version." />
   </a>
