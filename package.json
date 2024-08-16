@@ -1,6 +1,6 @@
 {
   "name": "@chainplatform/sdk",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "@chainplatform/sdk is a React Native library implement for react-native and react-native-web. Require crypto-js and react-native-mmkv packages.",
   "main": "index.js",
   "devDependencies": {
