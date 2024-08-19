@@ -1,5 +1,9 @@
 [
     {
+        "label": "Aug 19, 2024",
+        "content": "Upgrade core platform to React Native 0.75.1. Add Admin Layout setting."
+    },
+    {
         "label": "Aug 10, 2024",
         "content": "Upgrade core platform to React Native 0.74.5, create @chainplatform/sdk package for platform."
     },
