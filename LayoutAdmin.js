@@ -21,11 +21,13 @@ export function getLayoutAdmin(layoutWidth, isDesktop, side_bar_width, styles) {
         padding = styles.s75;
     }
     const chartWidth = (layoutWidth - sideBarMiniWidth - padding) / numberChart;
+    const chartWidthPC = 100 / numberChart;
     let view = {};
     view.sideBarWidth = sideBarWidth;
     view.sideBarMiniWidth = sideBarMiniWidth;
     view.sideBarSecondWidth = sideBarSecondWidth;
     view.sideBarOpen = sideBarOpen;
     view.chartWidth = chartWidth;
+    view.chartWidthPC = chartWidthPC + "%";
     return view;
 }
