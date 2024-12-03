@@ -31,3 +31,19 @@ export function getLayoutAdmin(layoutWidth, isDesktop, side_bar_width, styles) {
     view.chartWidthPC = chartWidthPC + "%";
     return view;
 }
+
+export function getScreenSizeAdmin(layoutWidth, styles) {
+    let numberChart = 1;
+    let padding = styles.s30;
+    if (layoutWidth > 767) {
+        numberChart = 2;
+        padding = styles.s45;
+    }
+    const chartWidth = (layoutWidth - padding) / numberChart;
+    const chartWidthPC = 100 / numberChart;
+    let view = {};
+    view.padding = padding;
+    view.width = chartWidth;
+    view.widthPC = chartWidthPC + "%";
+    return view;
+}

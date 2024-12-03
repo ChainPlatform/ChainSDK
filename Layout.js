@@ -68,7 +68,27 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
     const courseWidth = courseViewWidth / courseTotalItem;
     newsViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - newsSpace;
     const newsWidth = newsViewWidth / newsTotalItem;
-
+    let numberChart = 1;
+    let padding = styles.s30;
+    if (layoutWidth > 460 && layoutWidth < styles.base_desktop) {
+        numberChart = 2;
+        padding = styles.s45;
+    }
+    if (layoutWidth >= styles.base_desktop && layoutWidth < styles.split_desktop) {
+        numberChart = 3;
+        padding = styles.s60;
+    }
+    if (layoutWidth >= styles.split_desktop) {
+        numberChart = 5;
+        padding = styles.s90;
+    }
+    let packageWidth = (layoutWidth - padding - sideBarWidth) / numberChart;
+    if (packageWidth < styles.s232) {
+        packageWidth = styles.s232;
+    }
+    if (packageWidth > styles.s280) {
+        packageWidth = styles.s280;
+    }
     let view = {};
     view.viewPadding = viewPadding;
     view.sideBarWidth = sideBarWidth;
@@ -81,6 +101,7 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
     view.courseWidth = courseWidth;
     view.newsWidth = newsWidth;
     view.splitPadding = splitPadding;
+    view.packageWidth = packageWidth;
     return view;
 }
 
