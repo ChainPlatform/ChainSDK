@@ -89,7 +89,19 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
     if (packageWidth > styles.s280) {
         packageWidth = styles.s280;
     }
+
+    let numberwebinarChart = 1;
+    let webinarPadding = styles.s0;
+    if (layoutWidth - sideBarWidth - 2 * viewPadding >= 500) {
+        numberwebinarChart = 2;
+        webinarPadding = styles.fs15;
+    }
+    let webinarViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - webinarPadding;
+    const webinarWidth = webinarViewWidth / numberwebinarChart;
     let view = {};
+    view.webinarWidth = webinarWidth;
+    view.webinarPadding = webinarPadding;
+    view.numberWebinar = numberwebinarChart;
     view.viewPadding = viewPadding;
     view.sideBarWidth = sideBarWidth;
     view.bannerOnScreen = bannerOnScreen;
@@ -216,5 +228,20 @@ export function getCourseLearingLayout(layoutWidth, isDesktop, styles) {
     let view = {};
     view.sidebarWidth = sidebarWidth;
     view.viewPadding = viewPadding;
+    return view;
+}
+
+export function getScreenWebinarSize(layoutWidth, styles) {
+    let numberChart = 1;
+    let padding = styles.s30;
+    if (layoutWidth >= 500) {
+        numberChart = 2;
+        padding = styles.s45;
+    }
+    let tmpViewWidth = layoutWidth - padding;
+    let viewWidth = tmpViewWidth / numberChart;
+    let view = {};
+    view.viewWidth = viewWidth;
+    view.viewPadding = styles.fs15;
     return view;
 }
