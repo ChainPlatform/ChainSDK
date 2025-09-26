@@ -17,6 +17,12 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
     let newsTotalItem = 2;
     let courseSpace = 0;
     let newsSpace = 0;
+    // News
+    let newsItem = 1;
+    let newsPadding = 0;
+    // New Course
+    let courseItem = 1;
+    let coursePadding = 0;
     if (isDesktop) {
         courseSpace = styles.s30 + styles.fs15;
         newsSpace = styles.s30 + styles.fs15;
@@ -34,6 +40,12 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
         newsTotalItem = 3;
         courseSpace = styles.s45 + styles.fs15;
         newsSpace = styles.s45 + styles.fs15;
+        // News
+        newsItem = 2;
+        newsPadding = styles.fs15;
+        // New Course
+        courseItem = 3;
+        coursePadding = styles.s30;
     }
     let viewWidth = styles.s345;
     let viewHeight = styles.s195;
@@ -50,11 +62,20 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
             newsTotalItem = 4;
             courseSpace = styles.s75;
             newsSpace = styles.s75;
+            // News
+            newsItem = 3;
+            newsPadding = styles.s30;
+            // New Course
+            courseItem = 4;
+            coursePadding = styles.s45;
         }
         if (layoutWidth >= styles.wide_split_desktop) {
             // Course
             courseTotalItem = 5;
             courseSpace = styles.s75 + styles.fs15;
+            //
+            courseItem = 5;
+            coursePadding = styles.s60;
         }
         bannerViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - splitPadding;
         viewWidth = bannerViewWidth / bannerOnScreen;
@@ -66,8 +87,10 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
     // Course
     courseViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - courseSpace;
     const courseWidth = courseViewWidth / courseTotalItem;
+    // News
     newsViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - newsSpace;
     const newsWidth = newsViewWidth / newsTotalItem;
+    //
     let numberChart = 1;
     let padding = styles.s30;
     if (layoutWidth > 460 && layoutWidth < styles.base_desktop) {
@@ -96,14 +119,35 @@ export function getScreenSize(layoutWidth, isDesktop, side_bar_width, styles) {
         numberwebinarChart = 2;
         webinarPadding = styles.fs15;
     }
-    let webinarViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - webinarPadding;
+    if (layoutWidth >= styles.split_desktop && side_bar_width == 0) {
+        numberwebinarChart = 3;
+        webinarPadding = styles.fs15;
+    }
+
+    let newsItemViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - newsPadding;
+    const newsItemWidth = newsItemViewWidth / newsItem;
+
+    let courseItemViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - coursePadding;
+    const courseItemWidth = courseItemViewWidth / courseItem;
+
+    let webinarViewWidth = layoutWidth - sideBarWidth - 2 * viewPadding - (numberwebinarChart - 1) * webinarPadding;
     const webinarWidth = webinarViewWidth / numberwebinarChart;
+
+    const layout = layoutWidth - sideBarWidth - (sideBarWidth > 0 ? 2 : 2) * viewPadding;
+
     let view = {};
+    view.courseItemWidth = courseItemWidth;
+    view.courseItem = courseItem;
+    view.coursePadding = coursePadding;
+    view.newsItemWidth = newsItemWidth;
+    view.newsItem = newsItem;
+    view.newsPadding = newsPadding;
     view.webinarWidth = webinarWidth;
     view.webinarPadding = webinarPadding;
     view.numberWebinar = numberwebinarChart;
     view.viewPadding = viewPadding;
     view.sideBarWidth = sideBarWidth;
+    view.layout = layout;
     view.bannerOnScreen = bannerOnScreen;
     view.imageMenuSize = imageMenuSize;
     view.fontMenuSize = fontMenuSize;
