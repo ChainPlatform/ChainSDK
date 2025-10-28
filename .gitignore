@@ -61,4 +61,8 @@ lib/
 !src/lib
 *.tsbuildinfo
 index.min.js
+index.minbk.js
 build.md
+Storage.web.min.js
+Storage.native.min.js
+helpers.min.js
