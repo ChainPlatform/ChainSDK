@@ -1,6 +1,6 @@
 {
   "name": "@chainplatform/sdk",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "@chainplatform/sdk is a React Native library implement for react-native and react-native-web. Require crypto-js and react-native-mmkv packages.",
   "main": "index.js",
   "author": "Chain Platform <santran686@gmail.com> (https://chainplatform.net/)",
@@ -14,7 +14,12 @@
     "dayjs",
     "react-native-mmkv",
     "react-native-nitro-modules",
-    "@react-native-async-storage/async-storage"
+    "@react-native-async-storage/async-storage",
+    "md5",
+    "base64_encode",
+    "base64 encode",
+    "base64_decode",
+    "base64 decode"
   ],
   "homepage": "https://github.com/ChainPlatform/ChainSDK",
   "bugs": "https://github.com/ChainPlatform/ChainSDK/issues",
